@@ -1,0 +1,36 @@
+.alert_me {
+    background-color: brown;
+    width: 35%;
+    float: left;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.change_color {
+    background-color: brown;
+    width: 25%;
+    float: right;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.text_tester {
+    background-color: brown;
+    width: 25%;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10%
+}
+
+.add_text {
+    background-color: brown;
+    width: 25%;
+    float: right;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10%
+}

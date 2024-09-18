@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>INST377 Lab 4</title>
+        <link rel="stylesheet" href="external_page.css">
+    </head>
+    <body>
+        <h1 id="lab4">INST377 - Lab 4</h1>
+
+        <!-- Alert Me Section -->
+        <div class="alert_me">
+            <label for="name"> Name: </label>
+            <input type="text" id=name required> 
+            <button onclick="(changeColor())">Alert Me!</button>
+        </div>
+
+        <!-- Change Color Section -->
+        <div class="change_color">
+            <button onclick="(changeColor())">Change Color</button>
+        </div>
+
+        <!-- Text Tester Section -->
+        <div class="text_tester">
+            <label for="text_test"> Text Tester: </label>
+            <input type="text" id=text_test required> 
+            <button onclick="(changeColor())">Validate Text</button>
+        </div>
+
+        <!-- Add Text Section -->
+        <div class="add_text">
+            <button onclick="(changeColor())">Add Text</button>
+        </div>
+
+        <script type="text/javascript">
+            function changeColor() {
+                if(document.getElementById('word').style.color == 'red') {
+                    const t = document.getElementById('word').style.color = 'black';
+                } else {
+                    const t = document.getElementById('word').style.color = 'red';
+                }
+            }
+        </script>
+    </body>
+</html>
