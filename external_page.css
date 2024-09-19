@@ -1,10 +1,15 @@
-.alert_me {
+body{
+    background-color: blue;
+}
+
+.section {
     background-color: brown;
-    width: 35%;
-    float: left;
-    margin-right: 10px;
+    width: 40%;
+    margin: 10px;
     padding: 10px;
     text-align: center;
+    border-style: solid black;
+    display: inline-block;
 }
 
 .change_color {
@@ -14,6 +19,7 @@
     margin-right: 10px;
     padding: 10px;
     text-align: center;
+    border-style: solid black;
 }
 
 .text_tester {
@@ -22,7 +28,8 @@
     float: left;
     padding: 10px;
     text-align: center;
-    margin-top: 10%
+    margin-top: 10%;
+    border-style: solid black;
 }
 
 .add_text {
@@ -32,5 +39,6 @@
     margin-right: 10px;
     padding: 10px;
     text-align: center;
-    margin-top: 10%
+    margin-top: 10%;
+    border-style: solid black;
 }

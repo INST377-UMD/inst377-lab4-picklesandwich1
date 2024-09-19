@@ -7,37 +7,64 @@
         <h1 id="lab4">INST377 - Lab 4</h1>
 
         <!-- Alert Me Section -->
-        <div class="alert_me">
-            <label for="name"> Name: </label>
-            <input type="text" id=name required> 
-            <button onclick="(changeColor())">Alert Me!</button>
+        <div class="section">
+            <form id="alert_user" onsubmit="return show_alert()">
+                <label for="name"> Name: </label>
+                <input type="text" id="name" required> 
+                <input type="submit" value="Alert Me!">
+            </form>
         </div>
-
+        
         <!-- Change Color Section -->
-        <div class="change_color">
-            <button onclick="(changeColor())">Change Color</button>
+        <div class="section">
+            <button name="color_changer" onclick="return change_color()">Change Color</button>
         </div>
-
+        
         <!-- Text Tester Section -->
-        <div class="text_tester">
+        <div class="section">
             <label for="text_test"> Text Tester: </label>
-            <input type="text" id=text_test required> 
-            <button onclick="(changeColor())">Validate Text</button>
+            <input type="text" id="text_test" required> 
+            <button onclick="return validate_text()">Validate Text</button>
         </div>
-
+        
         <!-- Add Text Section -->
-        <div class="add_text">
-            <button onclick="(changeColor())">Add Text</button>
+        <div class="section">
+            <button onclick="return add_text()">Add Text</button>
         </div>
 
+
+        
+        <!-- Javascript code -->
         <script type="text/javascript">
-            function changeColor() {
-                if(document.getElementById('word').style.color == 'red') {
-                    const t = document.getElementById('word').style.color = 'black';
+
+            function show_alert() {
+                alert("Hi " + document.getElementById("name").value + "!");
+                return false;
+            }
+        
+            function change_color() {
+                if(document.body.style.backgroundColor == 'blue') {
+                    document.body.style.backgroundColor = 'green';
                 } else {
-                    const t = document.getElementById('word').style.color = 'red';
+                    document.body.style.backgroundColor = 'blue';
                 }
             }
+        
+            function validate_text() {
+                const textValue = document.getElementById("text_test").value;
+                if (textValue === "") {
+                    alert("Text field is empty");
+                } else {
+                    alert("Text field contains: " + textValue);
+                }
+            }
+        
+            function add_text() {
+                const newText = document.createElement("p");
+                newText.innerHTML = "New Text Added!";
+                document.body.appendChild(newText);
+            }
+
         </script>
     </body>
 </html>
