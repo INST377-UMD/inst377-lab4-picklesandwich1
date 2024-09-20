@@ -1,0 +1,9 @@
+.section {
+    background-color: brown;
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-style: solid yellow;
+    display: inline-block;
+}

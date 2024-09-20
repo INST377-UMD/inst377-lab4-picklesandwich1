@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>INST377 Lab 4</title>
+        <link rel="stylesheet" href="external_page.css">
+    </head>
+    <body>
+        <h1 id="lab4">INST377 - Lab 4</h1>
+
+        <!-- Alert Me Section -->
+        <div class="section">
+            <form id="alert_user" onsubmit="return show_alert()">
+                <label for="name"> Name: </label>
+                <input type="text" id="name" required> 
+                <input type="submit" value="Alert Me!">
+            </form>
+        </div>
+        
+        <!-- Change Color Section -->
+        <div class="section">
+            <button name="color_changer" onclick="return change_color()">Change Color</button>
+        </div>
+        
+        <!-- Text Tester Section -->
+        <div class="section">
+            <form id="text_tester" onsubmit="return validate_text()">
+            <label for="text_test"> Text Tester: </label>
+            <input type="text" id="text_test"> 
+            <button>Validate Text</button>
+        </div>
+        
+        <!-- Add Text Section -->
+        <div class="section">
+            <button onclick="return add_text()">Add Text</button>
+        </div>
+
+
+        
+        <!-- Javascript code -->
+        <script type="text/javascript">
+
+            //show_alert function
+            function show_alert() {
+                alert("Hi " + document.getElementById("name").value + "!");
+                return false;
+            }
+            
+            //change_color function
+            function change_color() {
+                if(document.body.style.backgroundColor == 'blue') {
+                    document.body.style.backgroundColor = 'green';
+                } 
+                
+                else {
+                    document.body.style.backgroundColor = 'blue';
+                }
+                return false;
+            }
+            document.body.style.backgroundColor = 'blue';
+        
+            //validate_text function
+            function validate_text() {
+                //special characters
+                var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+                const textValue = document.getElementById("text_test").value;
+
+                if (textValue === "") {
+                    alert("Text field is empty");
+                    return false;
+                }
+
+                if (validation.test(textValue)) {
+                    alert("Failed, there are special characters");
+                    return false;
+                } 
+                else {
+                    alert("Good input, no special characters detected");
+                }
+                return true;
+            }
+            
+            //add_text function
+            function add_text() {
+                document.getElementById("lab4").innerHTML = "INST377 - Lab 4 Adding Text!";
+                return false;
+            }
+
+        </script>
+    </body>
+</html>
